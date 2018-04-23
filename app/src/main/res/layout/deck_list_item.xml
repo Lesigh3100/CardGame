@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="66dp"
+    android:layout_height="116dp"
+    android:id="@+id/deck_wrapper">
+
+    <ImageView
+        android:id="@+id/picture_slot_deck_library"
+        android:layout_width="66dp"
+        android:layout_height="88dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:clickable="false"
+        android:contentDescription="@string/picture"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/deck_name_deck_library"
+        android:layout_width="66dp"
+        android:layout_height="28dp"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/picture_slot_deck_library"
+        android:text="Deck Name Here"
+        />
+
+</RelativeLayout>

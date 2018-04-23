@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="66dp"
+    android:layout_height="116dp"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    android:id="@+id/card_slot_layout_container_card_library"
+    >
+
+    <ImageView
+        android:id="@+id/picture_slot_card_library"
+        android:layout_width="66dp"
+        android:layout_height="88dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:clickable="false"
+        android:contentDescription="@string/picture"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/on_card_mana_card_library"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/picture_slot_card_library"
+        android:layout_alignStart="@+id/picture_slot_card_library"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
+        android:text="1"
+        android:textColor="@color/blue_mana"
+        android:textSize="12sp" />
+    <ImageView
+        android:id="@+id/mana_bottle_card_library"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_below="@+id/on_card_mana"
+        android:layout_alignLeft="@id/picture_slot_card_library"
+        android:layout_alignStart="@+id/picture_slot_card_library"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
+        android:src="@drawable/mana_bottle" />
+    <TextView
+        android:id="@+id/on_card_attack_card_library"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/picture_slot_card_library"
+        android:layout_alignLeft="@+id/picture_slot_card_library"
+        android:layout_alignStart="@+id/picture_slot_card_library"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/sword_card_library"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_above="@+id/on_card_attack_card_library"
+        android:layout_alignLeft="@id/picture_slot_card_library"
+        android:layout_alignStart="@+id/picture_slot_card_library"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
+        android:src="@drawable/sword" />
+
+    <TextView
+        android:id="@+id/on_card_hp_card_library"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/picture_slot_card_library"
+        android:layout_alignEnd="@+id/picture_slot_card_library"
+        android:layout_alignRight="@+id/picture_slot_card_library"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/heart_card_library"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_above="@+id/on_card_hp_card_library"
+        android:layout_alignEnd="@id/picture_slot_card_library"
+        android:layout_alignRight="@id/picture_slot_card_library"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:src="@drawable/heart" />
+
+    <TextView
+        android:id="@+id/card_name_card_library"
+        android:layout_width="66dp"
+        android:layout_height="28dp"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/picture_slot_card_library"
+        android:text="Card Name Here"
+        />
+
+</RelativeLayout>
+

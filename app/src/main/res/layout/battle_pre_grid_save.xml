@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_battle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kevin.android.cardgamev1.battle.Battle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/enemy_block"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        >
+
+        <TextView
+            android:text="Champion Type"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/enemy_champion_type"
+            android:layout_gravity="center_vertical|center_horizontal" />
+
+        <TextView
+            android:text="Player X"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/enemy_player_name"
+            android:layout_gravity="center_vertical|center_horizontal"/>
+
+        <TextView
+            android:text="Life"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/enemy_life"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+        <TextView
+            android:text="Mana"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/enemy_mana"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+        <TextView
+            android:text="CiH"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/enemy_cih"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+        <TextView
+            android:text="CiD"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/enemy_cid"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+        <TextView
+            android:text="CiB"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/enemy_cib"
+            android:layout_gravity="center_vertical|center_horizontal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/enemy_power_field"
+        android:layout_below="@+id/enemy_block"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/enemy_champion_power"
+            android:text="Champion Power"
+            android:textSize="12sp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/enemy_champion_weapon"
+            android:text="Champion Weapon"
+            android:textSize="12sp"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/enemy_champion"
+        android:text="Champion"
+        android:textSize="15sp"
+        android:layout_below="@+id/enemy_power_field"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/enemy_card_field_layout"
+        android:layout_below="@+id/enemy_champion"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/enemy_board">
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/enemy_card_field_1"
+                android:text="card type"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/enemy_card_field_2"
+                android:text="card type"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/enemy_card_field_3"
+                android:text="card type"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/enemy_card_field_4"
+                android:text="card type"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/enemy_card_field_5"
+                android:text="card type"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/enemy_card_field_6"
+                android:text="card type"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/hero_card_field_layout"
+        android:layout_above="@+id/hero_hand_field"
+        android:layout_marginBottom="12dp">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/hero_board">
+
+            <RadioButton
+                android:id="@+id/hero_card_field_1"
+                style="@style/radio_button_board"
+                android:text="card type" />
+            <RadioButton
+                style="@style/radio_button_board"
+                android:id="@+id/hero_card_field_2"
+                android:text="card type"
+                />
+            <RadioButton
+                style="@style/radio_button_board"
+                android:id="@+id/hero_card_field_3"
+                android:text="card type"
+                />
+            <RadioButton
+                style="@style/radio_button_board"
+                android:id="@+id/hero_card_field_4"
+                android:text="card type"
+                />
+            <RadioButton
+                style="@style/radio_button_board"
+                android:id="@+id/hero_card_field_5"
+                android:text="card type"
+                />
+            <RadioButton
+                style="@style/radio_button_board"
+                android:id="@+id/hero_card_field_6"
+                android:text="card type"
+                />
+        </RadioGroup>
+    </LinearLayout>
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:numColumns="6"
+        android:id="@+id/grid_hero_field"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/hero_hand_field"
+        android:layout_marginBottom="12dp"
+        >
+    </GridView>
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:numColumns="6"
+        android:id="@+id/grid_hero_hand"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/hero_hand_field"
+        android:layout_marginBottom="12dp"
+        >
+    </GridView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/hero_hand_field"
+        android:layout_above="@+id/hero_power_field"
+        android:layout_marginBottom="12dp">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/hero_hand">
+            <RadioButton
+                style="@style/radio_button_board"
+                android:id="@+id/hero_card_hand_1"
+                android:text="It's a card"
+                android:textSize="12sp"/>
+            <RadioButton
+                style="@style/radio_button_board"
+                android:id="@+id/hero_card_hand_2"
+                android:text="It's a card"
+                android:textSize="12sp"/>
+            <RadioButton
+                style="@style/radio_button_board"
+                android:id="@+id/hero_card_hand_3"
+                android:text="It's a card"
+                android:textSize="12sp"/>
+            <RadioButton
+                style="@style/radio_button_board"
+                android:id="@+id/hero_card_hand_4"
+                android:text="It's a card"
+                android:textSize="12sp"/>
+            <RadioButton
+                style="@style/radio_button_board"
+                android:id="@+id/hero_card_hand_5"
+                android:text="It's a card"
+                android:textSize="12sp"/>
+            <RadioButton
+                style="@style/radio_button_board"
+                android:id="@+id/hero_card_hand_6"
+                android:text="It's a card"
+                android:textSize="12sp"/>
+            <RadioButton
+                style="@style/radio_button_board"
+                android:id="@+id/hero_card_hand_7"
+                android:text="It's a card"
+                android:textSize="12sp"/>
+            <RadioButton
+                style="@style/radio_button_board"
+                android:id="@+id/hero_card_hand_8"
+                android:text="It's a card"
+                android:textSize="12sp"/>
+        </RadioGroup>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/hero_power_field"
+        android:layout_above="@+id/hero_block"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/hero_champion_power"
+            android:text="Champion Power"
+            android:textSize="12sp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/hero_champion_weapon"
+            android:text="Champion Weapon"
+            android:textSize="12sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/hero_block"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:text="Champion Type"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/hero_champion_type"
+            android:layout_gravity="center_vertical|center_horizontal" />
+
+        <TextView
+            android:text="Player X"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/hero_player_name"
+            android:layout_gravity="center_vertical|center_horizontal"/>
+
+        <TextView
+            android:text="Life"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/hero_life"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+        <TextView
+            android:text="Mana"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/hero_mana"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+        <TextView
+            android:text="CiH"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/hero_cih"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+        <TextView
+            android:text="CiD"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/hero_cid"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+        <TextView
+            android:text="CiB"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/hero_cib"
+            android:layout_gravity="center_vertical|center_horizontal"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/countdown_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:text="Timer"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/end_turn_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:text="End Turn"
+        android:textSize="12sp" />
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/battle_loading_screen"
+    >
+    <LinearLayout
+        style="@style/loading_screen_linear_layout">
+
+    <ImageView
+        style="@style/loading_screen_image_view"
+        android:id="@+id/loading_screen_hero_image"
+        />
+        <TextView
+            style="@style/loading_screen_text_views"
+            android:id="@+id/loading_screen_hero_name"
+            android:text="Hero Name"
+            />
+    </LinearLayout>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="60dp"
+    android:layout_marginBottom="60dp"
+    android:text="@string/vs"
+    android:textSize="24sp"
+    android:textColor="@color/black"
+    />
+
+    <LinearLayout
+        style="@style/loading_screen_linear_layout">
+
+        <ImageView
+            style="@style/loading_screen_image_view"
+            android:id="@+id/loading_screen_enemy_image"
+            />
+        <TextView
+            style="@style/loading_screen_text_views"
+            android:id="@+id/loading_screen_enemy_name"
+            android:text="Enemy Name"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".decks.DeckBuilder">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="6dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:layout_gravity="top"
+            android:text="@string/deck_name"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/deck_creator_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_weight="4"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:imeOptions="actionDone"/>
+
+        <Button
+            android:id="@+id/deck_creator_save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/deck_creator_champion_image"
+            android:layout_marginStart="12dp"
+            android:layout_weight="5"
+            android:layout_gravity="top" />
+        <Button
+            android:id="@+id/deck_creator_delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/delete" />
+    </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_group_deck_builder"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_button_champion"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="Champion"
+                android:background="@drawable/radio_button_selector"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:gravity="center_vertical|center_horizontal"
+                />
+
+            <RadioButton
+                android:id="@+id/radio_button_universal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/radio_button_selector"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/universal"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+        </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        >
+
+    <GridView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:numColumns="2"
+        android:id="@+id/grid_card_selector"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        >
+    </GridView>
+
+            <ListView
+                android:id="@+id/deck_creator_in_deck_listview"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp">
+            </ListView>
+</LinearLayout>
+
+</LinearLayout>

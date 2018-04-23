@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "221481141954",
+    "firebase_url": "https://ascender-62025786.firebaseio.com",
+    "project_id": "ascender-62025786",
+    "storage_bucket": "ascender-62025786.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221481141954:android:3c7c48daa8de530a",
+        "android_client_info": {
+          "package_name": "com.kevin.android.cardgamev1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "221481141954-ks1lnldtc9575kqu1ru8l88sc0t72ls2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kevin.android.cardgamev1",
+            "certificate_hash": "b6108d7cda947a06bd52dcf5a17decd1f4f9d966"
+          }
+        },
+        {
+          "client_id": "221481141954-21foj8e8ogdfprcpf4pv3utfknb9n03c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYew_Tt6-ol6r9QWVcnFvuK7wYncYqUAk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "221481141954-21foj8e8ogdfprcpf4pv3utfknb9n03c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

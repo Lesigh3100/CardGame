@@ -1,0 +1,96 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="radio_button_board">
+        <item name="android:drawable">@drawable/radio_button_selector</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">66dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="switch_linear_layout_holder">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="card_creator_left_text_view">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="card_creator_increment_buttons">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">2.5</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+<style name="card_creator_switch_descriptions">
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:layout_weight">5</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:textColor">@color/black</item>
+    <item name="android:gravity">center_horizontal|center_vertical</item>
+</style>
+    <style name="card_creator_switch">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="card_creator_horizontal_layout_wrapper">
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="card_creator_stat_number_textviews">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    
+    <style name="loading_screen_text_views">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    
+    <style name="loading_screen_linear_layout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginTop">80dp</item>
+    </style>
+
+    <style name="loading_screen_image_view">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+
+    </style>
+
+
+</resources>

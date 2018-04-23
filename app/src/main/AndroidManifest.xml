@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kevin.android.cardgamev1">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/ascender"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".battle.Battle"
+            android:label=""
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardLibrary"
+            android:label=""
+            android:parentActivityName=".decks.DeckSelector" />
+        <activity
+            android:name=".decks.DeckSelector"
+            android:label=""
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".creationtools.cards.CardCreator"
+            android:label="Card Creation"
+            android:parentActivityName=".creationtools.cards.CardDatabase"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".decks.DeckBuilder"
+            android:parentActivityName=".decks.DeckSelector" />
+        <activity
+            android:name=".creationtools.cards.CardDatabase"
+            android:label="Card Database"
+            android:parentActivityName=".MainActivity" />
+
+        <provider
+            android:name=".database.GameProvider"
+            android:authorities="com.kevin.android.cardgamev1"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
+            android:value="@string/app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".decks.DeckChampionChooser"
+            android:parentActivityName=".decks.DeckSelector" />
+        <activity
+            android:name=".creationtools.champions.ChampionCreator"
+            android:parentActivityName=".creationtools.CreatorMain" />
+        <activity
+            android:name=".creationtools.CreatorMain"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".creationtools.champions.ChampionDatabase"
+            android:parentActivityName=".creationtools.CreatorMain">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black">#000000</color>
+    <color name="red_life">#990703</color>
+    <color name="blue_mana">#3a5fcd</color>
+    <color name="checkbox_active">#757575</color>
+    <color name="checkbox_inactive">#bdbdbd</color>
+    <color name="white">#ffffff</color>
+</resources>

@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kevin.android.cardgamev1.creationtools.cards.CardCreator">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:text="@string/name"
+            android:textSize="15sp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/card_creator_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_weight="4"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:maxLength="15"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+           />
+
+        <Button
+            android:id="@+id/card_creator_save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/card_creator_card_description_edit_text"
+            android:layout_marginStart="12dp"
+            android:layout_weight="5"
+            android:layout_gravity="top"
+            android:hint="Card Description"
+            android:maxLines="1"
+            android:inputType="text"
+            />
+        <Button
+            android:id="@+id/card_creator_delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/delete" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:text="@string/mana_cost"
+            android:textColor="@color/black"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/card_creator_mana_cost"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:textColor="@color/blue_mana"
+            android:text="0"
+            android:textSize="22sp" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:text="@string/champion_type"
+            />
+            <Spinner
+                android:id="@+id/card_creator_spinner_1_champion"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/card_creator_scroll_view_creature"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+                <TextView
+                    android:text="@string/add_image"
+                    style="@style/card_creator_left_text_view"
+                    />
+                <Button
+                    android:id="@+id/card_creator_image_button"
+                    style="@style/card_creator_increment_buttons"
+
+                    android:text="@string/add_image"/>
+
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:id="@+id/card_creator_image_view"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    android:text="@string/life"
+                    style="@style/card_creator_left_text_view"
+                    />
+
+                <TextView
+                        android:id="@+id/card_creator_life_textview"
+                    style="@style/card_creator_stat_number_textviews"
+                        android:text="0"
+                        android:textColor="@color/red_life"
+                        />
+
+                    <Button
+                        android:id="@+id/card_creator_life_minus_button"
+                        style="@style/card_creator_increment_buttons"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/card_creator_life_plus_button"
+                        style="@style/card_creator_increment_buttons"
+                        android:text="+" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper" >
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="@string/attack" />
+
+                    <TextView
+                        android:id="@+id/card_creator_attack_textview"
+                        android:text="0"
+                        style="@style/card_creator_stat_number_textviews" />
+
+                    <Button
+                        android:id="@+id/card_creator_attack_minus_button"
+                        style="@style/card_creator_increment_buttons"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/card_creator_attack_plus_button"
+                        style="@style/card_creator_increment_buttons"
+                        android:text="+" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="@string/defense" />
+
+                    <TextView
+                        android:id="@+id/card_creator_defense_textview"
+                        style="@style/card_creator_stat_number_textviews"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/card_creator_defense_minus_button"
+                        style="@style/card_creator_increment_buttons"
+                        android:text="-" />
+
+                    <Button
+                        android:id="@+id/card_creator_defense_plus_button"
+                        style="@style/card_creator_increment_buttons"
+                        android:text="+" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Quick" />
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_1_quick"
+                        style="@style/card_creator_switch"/>
+
+                    <TextView
+                        style="@style/card_creator_switch_descriptions"
+                        android:id="@+id/switch_quick_description"
+                        android:text="Allows creature to attack on the same turn it's summoned"
+                         />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Overpower" />
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_2_overpower"
+                        style="@style/card_creator_switch" />
+                    <TextView
+                        style="@style/card_creator_switch_descriptions"
+                        android:id="@+id/switch_overpower_description"
+                        android:text="Overpower deals any leftover damage from killing a creature to another victim"
+                        />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Defender" />
+
+
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_3_defender"
+                        style="@style/card_creator_switch" />
+                    <TextView
+                        style="@style/card_creator_switch_descriptions"
+                        android:id="@+id/switch_defender_description"
+                        android:text="Defender forces enemies to attack it before being able to attack anything else"
+                        />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Ranged" />
+                    <Switch
+                        android:id="@+id/card_creator_switch_4_ranged"
+                        style="@style/card_creator_switch" />
+                    <TextView
+                        style="@style/card_creator_switch_descriptions"
+                        android:id="@+id/switch_ranged_description"
+                        android:text="Ranged allows a creature to attack anything on the board"
+                        />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Area Attack" />
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_5_area_attack"
+                        style="@style/card_creator_switch" />
+
+                    <TextView
+                        style="@style/card_creator_switch_descriptions"
+                        android:id="@+id/switch_area_attack_description"
+                        android:text="A creature with area attack hits all enemies but only receives damage from one target"
+                        />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Lightning Reflexes" />
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_6_lightning_reflexes"
+                        style="@style/card_creator_switch" />
+                    <TextView
+                        style="@style/card_creator_switch_descriptions"
+                        android:id="@+id/switch_lightning_reflexes_description"
+                        android:text="A creature with lightning reflexes deals damage first and takes none if the opposing creature dies"
+                        />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Concealed" />
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_7_concealed"
+                        style="@style/card_creator_switch" />
+
+                <TextView
+                    style="@style/card_creator_switch_descriptions"
+                    android:id="@+id/switch_concealed_description"
+                    android:text="Creature enters the field unable to be targeted"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Pillage" />
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_8_pillage"
+                       style="@style/card_creator_switch" />
+
+                <TextView
+                    style="@style/card_creator_switch_descriptions"
+                    android:id="@+id/switch_pillage_description"
+                    android:text="Keeps the weapon or armor of its kills"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Battle Ready" />
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_9_battle_ready"
+                        style="@style/card_creator_switch" />
+                <TextView
+                    style="@style/card_creator_switch_descriptions"
+                    android:id="@+id/switch_battle_ready_description"
+                    android:text="Can equip items immediately"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Rally" />
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_10_rally"
+                        style="@style/card_creator_switch" />
+                <TextView
+                    style="@style/card_creator_switch_descriptions"
+                    android:id="@+id/switch_rally_description"
+                    android:text="Gives a friendly unit a free shot at its target"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Bluff" />
+
+
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_11_bluff"
+                        style="@style/card_creator_switch" />
+                    <TextView
+                        style="@style/card_creator_switch_descriptions"
+                        android:id="@+id/switch_bluff_description"
+                        android:text="Creature comes into play showing dubious statistics"
+                        />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Unstable" />
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_12_unstable"
+                        style="@style/card_creator_switch"/>
+                <TextView
+                    style="@style/card_creator_switch_descriptions"
+                    android:id="@+id/switch_unstable_description"
+                    android:text="Creature can attack for double or half of its attack value"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Charged Up" />
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_13_fired_up"
+                        style="@style/card_creator_switch" />
+                <TextView
+                    style="@style/card_creator_switch_descriptions"
+                    android:id="@+id/switch_charged_up_description"
+                    android:text="Deals 2 additional damage on first attack"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Draw Card" />
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_14_draw_card"
+                       style="@style/card_creator_switch" />
+                <TextView
+                    style="@style/card_creator_switch_descriptions"
+                    android:id="@+id/switch_draw_card_description"
+                    android:text="Draws a card upon summoning"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Warm Blooded" />
+                    <Switch
+                        android:id="@+id/card_creator_switch_15_warm_blooded"
+                        style="@style/card_creator_switch"/>
+                <TextView
+                    style="@style/card_creator_switch_descriptions"
+                    android:id="@+id/switch_warm_blooded_description"
+                    android:text="Impervious to harmful effects"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Last Word" />
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_16_last_word"
+                        style="@style/card_creator_switch" />
+                <TextView
+                    style="@style/card_creator_switch_descriptions"
+                    android:id="@+id/switch_last_word_description"
+                    android:text="Performs an action upon dying"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Set Fire" />
+                    <Switch
+                        android:id="@+id/card_creator_switch_17_set_fire"
+                        style="@style/card_creator_switch" />
+                <TextView
+                    style="@style/card_creator_switch_descriptions"
+                    android:id="@+id/switch_set_fire_description"
+                    android:text="Deals extra damage on following turns to whatever it strikes"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Armor Break" />
+
+
+                    <Switch
+                        android:id="@+id/card_creator_switch_18_armor_break"
+                        style="@style/card_creator_switch" />
+                <TextView
+                    style="@style/card_creator_switch_descriptions"
+                    android:id="@+id/switch_armor_break_description"
+                    android:text="Destroys armor on hit"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/card_creator_scroll_view_spell"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/card_creator_horizontal_layout_wrapper">
+
+                <TextView
+                    style="@style/card_creator_left_text_view"
+                    android:text="Summon Creature" />
+
+
+                <Switch
+                    android:id="@+id/card_creator_switch_19_direct_damage"
+                    style="@style/card_creator_switch" />
+                <TextView
+                    style="@style/card_creator_switch_descriptions"
+                    android:id="@+id/switch_direct"
+                    android:text="Destroys armor on hit"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

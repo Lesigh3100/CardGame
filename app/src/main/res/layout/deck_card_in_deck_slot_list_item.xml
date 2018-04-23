@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="horizontal" android:layout_width="70dp"
+android:layout_height="34dp"
+    android:id="@+id/deck_creator_card_in_deck_slot_layout"
+    android:background="@drawable/black_border_thin"
+    >
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="34dp"
+        android:id="@+id/deck_creator_text_number_of_cards"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center_horizontal|center_vertical"
+        />
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="34dp"
+        android:textSize="12sp"
+        android:id="@+id/deck_creator_text_slot_card_name"
+        android:text="Peon"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center_horizontal|center_vertical"
+        />
+</LinearLayout>

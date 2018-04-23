@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string-array name="champion_array">
+    <item>Neutral Card</item>
+    <item>Arsonist</item>
+    <item>Doppelganger</item>
+    <item>Sorcerer</item>
+    <item>Ninja</item>
+    <item>Berserker</item>
+    <item>Knight Templar</item>
+    <item>Necromancer</item>
+    <item>Cult Leader</item>
+    <item>Strategist</item>
+    <item>Merchant</item>
+</string-array></resources>
